@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget customSignInbutton(BuildContext context, {String? title,onPress}) {
+Widget customButton(BuildContext context, {String? title, onPress}) {
   double deviceWidth = MediaQuery.of(context).size.width;
   double deviceHeight = MediaQuery.of(context).size.height;
   return GestureDetector(
     onTap: onPress,
     child: Container(
-      
-      height: deviceHeight * 0.075,
+      height: deviceHeight * 0.065,
       width: deviceWidth * 0.44,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -29,7 +28,6 @@ Widget customSignInbutton(BuildContext context, {String? title,onPress}) {
             color: Colors.black,
           )
         ],
-        
       ),
     ),
   );

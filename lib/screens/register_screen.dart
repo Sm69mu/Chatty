@@ -13,12 +13,9 @@ class RegisterScreen extends StatelessWidget {
     final confirmpasswordController = TextEditingController();
     double deviceHeight = MediaQuery.of(context).size.height;
     double deviceWidth = MediaQuery.of(context).size.width;
-    
 
     //signup method
-    void signUp(){
-
-    }
+    void signUp() {}
 
     return Scaffold(
       backgroundColor: Colors.grey[120],
@@ -87,7 +84,7 @@ class RegisterScreen extends StatelessWidget {
                   ),
 
                   //signup button
-                  customSignInbutton(context, title: "Sign Up", onPress: signUp),
+                  customButton(context, title: "Sign Up", onPress: signUp),
                   //already have an ac
 
                   SizedBox(

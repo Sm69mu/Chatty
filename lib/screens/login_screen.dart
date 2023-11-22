@@ -1,3 +1,4 @@
+import 'package:chatty/screens/home_screen.dart';
 import 'package:chatty/screens/register_screen.dart';
 import 'package:chatty/widgets/custom_button.dart';
 import 'package:chatty/widgets/text_feild_widget.dart';
@@ -15,12 +16,10 @@ class LoginScreen extends StatelessWidget {
     double deviceWidth = MediaQuery.of(context).size.width;
 
     //sign in method
-    void signIn(){
-
-    }
+    //void signIn() {}
 
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey[120],
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -77,14 +76,20 @@ class LoginScreen extends StatelessWidget {
                   ),
 
                   //signin button
-                  customSignInbutton(context, title: "Sign In", onPress: signIn),
+                  customButton(context, title: "Sign In", onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()),
+                    );
+                  }),
                   //not a user register now
 
                   SizedBox(
                     height: deviceHeight / 40,
                   ),
 
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       Navigator.push(
                         context,
