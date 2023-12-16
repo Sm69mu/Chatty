@@ -59,7 +59,7 @@ class LoginScreen extends StatelessWidget {
                   //email text field
                   TextFeildWidget(
                       controller: emailController,
-                      hintText: "Email",
+                      hintText: "Enter Your Email",
                       obscureText: false),
 
                   SizedBox(
@@ -69,13 +69,13 @@ class LoginScreen extends StatelessWidget {
                   //password text field
                   TextFeildWidget(
                       controller: passwordController,
-                      hintText: "Password",
+                      hintText: "Enter Your Password",
                       obscureText: true),
                   SizedBox(
                     height: deviceHeight / 20,
                   ),
 
-                  //signin button
+                  //signing button
                   customButton(context, title: "Sign In", onPress: () {
                     Navigator.push(
                       context,
