@@ -1,4 +1,5 @@
 import 'package:chatty/constants/const_exports.dart';
+import 'package:chatty/screens/chat_profile_screen.dart';
 import 'package:chatty/widgets/chat_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -19,21 +20,42 @@ class _ChatScreenState extends State<ChatScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            CircleAvatar(
-              radius: 22,
-              foregroundImage: AssetImage(improfile),
-            ),
-            SizedBox(
-              width: 20,
-            ),
-            Text(
-              "Soumyajit Mukherjee",
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
-            ),
-          ],
+        title: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const ChatProfileScreen()),
+            );
+          },
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              CircleAvatar(
+                radius: 22,
+                foregroundImage: AssetImage(improfile),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Text(
+                    "Soumyajit Mukherjee",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                  ),
+                  SizedBox(
+                    height: 3,
+                  ),
+                  Text(
+                    "last seen 12:30 pm",
+                    style: TextStyle(fontSize: 15),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
         actions: [
           PopupMenuButton<String>(
@@ -115,8 +137,7 @@ class _ChatScreenState extends State<ChatScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Expanded(
-                child:
-                    chatTextField(), // Assuming you have a ChatTextField widget
+                child: chatTextField(),
               ),
               SizedBox(
                 width: deviceWidth / 40,

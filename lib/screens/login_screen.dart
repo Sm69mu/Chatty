@@ -1,3 +1,4 @@
+import 'package:chatty/screens/home.dart';
 import 'package:chatty/screens/home_screen.dart';
 import 'package:chatty/screens/register_screen.dart';
 import 'package:chatty/widgets/custom_button.dart';
@@ -79,8 +80,7 @@ class LoginScreen extends StatelessWidget {
                   customButton(context, title: "Sign In", onPress: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomeScreen()),
+                      MaterialPageRoute(builder: (context) => const Home()),
                     );
                   }),
                   //not a user register now
