@@ -1,5 +1,4 @@
 import 'package:chatty/screens/home.dart';
-import 'package:chatty/screens/home_screen.dart';
 import 'package:chatty/screens/register_screen.dart';
 import 'package:chatty/widgets/custom_button.dart';
 import 'package:chatty/widgets/text_feild_widget.dart';
@@ -83,6 +82,7 @@ class LoginScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => const Home()),
                     );
                   }),
+                  
                   //not a user register now
 
                   SizedBox(
