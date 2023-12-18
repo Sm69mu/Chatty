@@ -49,7 +49,7 @@ class CallListScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const Text(
           "Calls",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
         ),
       ),
       body: Column(

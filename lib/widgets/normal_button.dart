@@ -4,7 +4,7 @@ Widget normalButton(BuildContext context,
     {String? title, color, onPress, textColor}) {
   double deviceWidth = MediaQuery.of(context).size.width;
   double deviceHeight = MediaQuery.of(context).size.height;
-  return GestureDetector(
+  return InkWell(
     onTap: onPress,
     child: Container(
       height: deviceHeight * 0.057,

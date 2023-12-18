@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 Widget customButton(BuildContext context, {String? title, onPress}) {
   double deviceWidth = MediaQuery.of(context).size.width;
   double deviceHeight = MediaQuery.of(context).size.height;
-  return GestureDetector(
+  return InkWell(
     onTap: onPress,
     child: Container(
       height: deviceHeight * 0.065,

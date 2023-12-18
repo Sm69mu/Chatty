@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: const Text(
           'Chats',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
         ),
         actions: [
           IconButton(
@@ -34,9 +34,7 @@ class HomeScreen extends StatelessWidget {
                       builder: (context) => const ProfileScreen()),
                 );
               },
-              icon: const CircleAvatar(
-                foregroundImage: AssetImage(improfile),
-              ))
+              icon: const Icon(Icons.more_vert_rounded))
         ],
       ),
       body: Column(
@@ -45,17 +43,23 @@ class HomeScreen extends StatelessWidget {
             height: 15,
           ),
           const ChatTile(),
+          const SizedBox(
+            height: 3,
+          ),
+          const ChatTile(),
           Expanded(child: Container()),
           Padding(
             padding: const EdgeInsets.all(16),
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: FloatingActionButton(
-                backgroundColor: Colors.white,
-                onPressed: () {},
-                child: Icon(
-                  Icons.chat_bubble_outline_rounded,
-                  color: Colors.grey[800],
+            child: InkWell(
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: FloatingActionButton(
+                  backgroundColor: Colors.white,
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.chat_bubble_outline_rounded,
+                    color: Colors.grey[800],
+                  ),
                 ),
               ),
             ),

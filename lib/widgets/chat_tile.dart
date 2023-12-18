@@ -15,16 +15,20 @@ class ChatTile extends StatelessWidget {
           MaterialPageRoute(builder: (context) => const ChatScreen()),
         );
       },
-      child: const ListTile(
-        selectedColor: Colors.grey,
-        trailing: Icon(Icons.arrow_forward_ios_rounded),
-        title: Text(
-          'Soumyajit Mukherjee',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        leading: CircleAvatar(
-          foregroundImage: AssetImage(improfile),
-          radius: 25,
+      child: Container(
+        alignment: Alignment.center,
+        height: 70,
+        child: const ListTile(
+          selectedColor: Colors.grey,
+          trailing: Icon(Icons.arrow_forward_ios_rounded),
+          title: Text(
+            'Soumyajit Mukherjee',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          leading: CircleAvatar(
+            foregroundImage: AssetImage(improfile),
+            radius: 28,
+          ),
         ),
       ),
     );
