@@ -1,4 +1,3 @@
-import 'package:chatty/constants/images.dart';
 import 'package:chatty/screens/profile_screen.dart';
 import 'package:chatty/widgets/chat_tile.dart';
 import 'package:flutter/material.dart';
