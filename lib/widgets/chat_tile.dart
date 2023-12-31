@@ -8,6 +8,7 @@ class ChatTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onLongPress: () {},
       borderRadius: BorderRadius.circular(14),
       onTap: () {
         Navigator.push(
