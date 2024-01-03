@@ -7,6 +7,7 @@ class ChatProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var lasSeenTime = "12:40 pm ";
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -17,18 +18,36 @@ class ChatProfileScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Center(
-            child: CircleAvatar(
-              radius: 70,
-              foregroundImage: AssetImage(improfile),
+          Center(
+            child: InkWell(
+              borderRadius: BorderRadius.circular(30),
+              onTap: () {
+                showDialog(
+                  barrierColor: Colors.black,
+                  context: context,
+                  builder: (context) {
+                    return Dialog.fullscreen(
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: double.infinity,
+                        child: Image.asset(improfile),
+                      ),
+                    );
+                  },
+                );
+              },
+              child: const CircleAvatar(
+                radius: 70,
+                backgroundImage: AssetImage(improfile),
+              ),
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          const Text(
-            "last seen on 12.30pm",
-            style: TextStyle(fontSize: 15),
+           Text(
+            "last seen on $lasSeenTime",
+            style: const TextStyle(fontSize: 15),
           ),
           const SizedBox(
             height: 20,
